@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weather Stations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7f13ec",
+            "background-light": "#f7f6f8",
+            "background-dark": "#191022",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+        background-image: linear-gradient(to top, #2c3e50, #8e44ad);
+        background-attachment: fixed;
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 md:p-8">
+<div class="flex h-full w-full max-w-5xl flex-col rounded-xl bg-[#F8F9FA] shadow-2xl dark:bg-background-dark">
+<!-- Header Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200/80 px-6 py-4 md:px-8 dark:border-white/10">
+<div class="flex items-center gap-4 text-[#343A40] dark:text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">partly_cloudy_day</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Weather Stations</h2>
+</div>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30">
+<span class="material-symbols-outlined">add</span>
+</button>
+</header>
+<main class="flex-1 p-6 md:p-8">
+<!-- Page Heading -->
+<div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-3xl font-black leading-tight tracking-[-0.033em] text-[#343A40] dark:text-white">Select a Station</p>
+<p class="text-base font-normal leading-normal text-gray-500 dark:text-gray-400">Choose a station to view its detailed weather data.</p>
+</div>
+</div>
+<!-- Station Cards Grid -->
+<div class="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6">
+<div class="group flex cursor-pointer flex-col gap-3 rounded-xl p-6 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style="background-image: linear-gradient(135deg, #a984e0, #fbc7d4);">
+<div class="flex flex-col">
+<p class="text-xl font-bold leading-normal text-white/90">Home Base</p>
+<p class="text-sm font-normal leading-normal text-white/70">San Francisco, CA</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-sm font-medium text-white/80">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>128 Visits</span>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3 rounded-xl p-6 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style="background-image: linear-gradient(135deg, #a984e0, #fbc7d4);">
+<div class="flex flex-col">
+<p class="text-xl font-bold leading-normal text-white/90">Downtown Office</p>
+<p class="text-sm font-normal leading-normal text-white/70">New York, NY</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-sm font-medium text-white/80">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>92 Visits</span>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3 rounded-xl p-6 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style="background-image: linear-gradient(135deg, #a984e0, #fbc7d4);">
+<div class="flex flex-col">
+<p class="text-xl font-bold leading-normal text-white/90">Mountain Cabin</p>
+<p class="text-sm font-normal leading-normal text-white/70">Denver, CO</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-sm font-medium text-white/80">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>45 Visits</span>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3 rounded-xl p-6 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style="background-image: linear-gradient(135deg, #a984e0, #fbc7d4);">
+<div class="flex flex-col">
+<p class="text-xl font-bold leading-normal text-white/90">Lakeside Retreat</p>
+<p class="text-sm font-normal leading-normal text-white/70">Lake Tahoe, NV</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-sm font-medium text-white/80">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>76 Visits</span>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3 rounded-xl p-6 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style="background-image: linear-gradient(135deg, #a984e0, #fbc7d4);">
+<div class="flex flex-col">
+<p class="text-xl font-bold leading-normal text-white/90">Coastal Outpost</p>
+<p class="text-sm font-normal leading-normal text-white/70">Big Sur, CA</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-sm font-medium text-white/80">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>31 Visits</span>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3 rounded-xl p-6 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style="background-image: linear-gradient(135deg, #a984e0, #fbc7d4);">
+<div class="flex flex-col">
+<p class="text-xl font-bold leading-normal text-white/90">Desert Monitoring</p>
+<p class="text-sm font-normal leading-normal text-white/70">Phoenix, AZ</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-sm font-medium text-white/80">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>58 Visits</span>
+</div>
+</div>
+</div>
+<!-- Empty State Example (commented out, can be used instead of the grid) -->
+<!--
+        <div class="flex flex-col items-center justify-center py-20">
+          <div class="flex flex-col items-center gap-6 text-center">
+            <div class="text-primary dark:text-primary/80">
+                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-sun-rain"><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12h9a4.5 4.5 0 0 1 0 9Z"/><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M12 12a2.5 2.5 0 0 0-2.5 2.5c0 1.25.5 2.5 2.5 2.5S14.5 17.25 14.5 16a2.5 2.5 0 0 0-2.5-2.5Z"/><path d="M8 22v-1"/><path d="m16 21-1-1"/></svg>
+            </div>
+            <div class="flex max-w-sm flex-col items-center gap-2">
+              <p class="text-xl font-bold leading-tight tracking-[-0.015em] text-[#343A40] dark:text-white">No Weather Stations Yet</p>
+              <p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Get started by adding your first station to monitor the weather.</p>
+            </div>
+            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-primary/90">
+                <span class="material-symbols-outlined text-lg">add</span>
+                <span class="truncate">Add Your First Station</span>
+            </button>
+          </div>
+        </div>
+        -->
+</main>
+</div>
+</div>
+</body></html>

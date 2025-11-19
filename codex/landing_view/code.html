@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weather App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7f13ec",
+            "background-light": "#f7f6f8",
+            "background-dark": "#191022",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .gradient-bg {
+      background-image: linear-gradient(to bottom right, #8a43a9, #544075, #353d58);
+    }
+    .dark .dark-gradient-bg {
+       background-image: linear-gradient(to bottom right, #8a43a9, #544075, #353d58);
+    }
+    .button-gradient {
+        background-image: linear-gradient(to right, #BE9DE5, #F1B9DA);
+        transition: all 0.3s ease;
+    }
+    .button-gradient:hover {
+        box-shadow: 0 0 20px rgba(230, 46, 152, 0.5);
+    }
+  </style>
+</head>
+<body class="antialiased font-display">
+<div class="relative flex h-screen min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark group/design-root overflow-hidden">
+<div class="absolute inset-0 w-full h-full gradient-bg dark:dark-gradient-bg"></div>
+<header class="absolute top-0 left-0 w-full p-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-3xl">partly_cloudy_day</span>
+<span class="text-white text-xl font-bold">ClimaApp</span>
+</div>
+</header>
+<main class="relative z-10 flex w-full max-w-lg flex-col items-center justify-center p-4">
+<div class="flex w-full flex-col items-center gap-8 rounded-xl bg-white p-8 shadow-2xl shadow-black/20 dark:bg-[#FFFFFF] md:p-12">
+<div class="flex flex-col gap-4 text-center">
+<h1 class="text-4xl font-black leading-tight tracking-tighter text-[#333333] dark:text-[#333333] md:text-5xl">
+          Descubre el clima en tu ciudad y planifica tu día
+        </h1>
+<h2 class="text-base font-normal leading-normal text-[#666666] dark:text-[#666666] md:text-lg">
+          Obtén pronósticos precisos y en tiempo real para mantenerte un paso adelante.
+        </h2>
+</div>
+<button class="flex min-w-[84px] w-full max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 text-base font-bold leading-normal tracking-wide text-white button-gradient transform hover:scale-105">
+<span class="truncate">Comenzar</span>
+</button>
+</div>
+</main>
+</div>
+</body></html>
