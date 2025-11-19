@@ -90,5 +90,6 @@
     </div>
 
     @extends(footer)
+    <script src="views/assets/js/navigation.js"></script>
 </body>
 </html>
