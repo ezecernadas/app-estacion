@@ -84,6 +84,18 @@ body {
   transform: translateY(-1px);
 }
 
+.icon-button:disabled,
+.icon-button[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.icon-button:disabled:hover,
+.icon-button[aria-disabled="true"]:hover {
+  background: rgba(127, 19, 236, 0.12);
+  transform: none;
+}
+
 .panel-main {
   padding: 28px;
 }

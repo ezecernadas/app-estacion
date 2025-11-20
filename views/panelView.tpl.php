@@ -5,9 +5,9 @@
             <header class="panel-header">
                 <div class="panel-brand">
                     <span class="material-symbols-outlined">partly_cloudy_day</span>
-                    <span class="panel-title">Weather Stations</span>
+                    <span class="panel-title">Estaciones meteorológicas</span>
                 </div>
-                <button class="icon-button" type="button" aria-label="Agregar estacion">
+                <button class="icon-button" type="button" aria-label="Agregar estacion" disabled aria-disabled="true" title="Proximamente">
                     <span class="material-symbols-outlined">add</span>
                 </button>
             </header>
