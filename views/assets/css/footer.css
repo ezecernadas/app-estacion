@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
+
+:root {
+  /* Usa el color primario definido en cada pantalla si existe. */
+  --footer-accent: var(--primary, var(--gradient-1, #b489f9));
+  --footer-surface: rgba(255, 255, 255, 0.06);
+  --footer-border: rgba(255, 255, 255, 0.14);
+  --footer-glow: rgba(0, 0, 0, 0.25);
+}
+
+.app-footer {
+  padding: 0 20px 28px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(6, 2, 15, 0.35) 40%, rgba(6, 2, 15, 0.65) 100%);
+  color: #f4f1ff;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid var(--footer-border);
+  background: var(--footer-surface);
+  box-shadow: 0 18px 38px var(--footer-glow);
+  backdrop-filter: blur(12px);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-title {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.footer-slogan {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: rgba(244, 241, 255, 0.8);
+}
+
+.footer-meta {
+  text-align: right;
+}
+
+.footer-meta p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer-author {
+  color: rgba(244, 241, 255, 0.82);
+}
+
+.footer-copy {
+  color: rgba(244, 241, 255, 0.72);
+  font-size: 13px;
+}
+
+.app-footer .material-symbols-outlined {
+  font-size: 30px;
+  color: var(--footer-accent);
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .footer-meta {
+    text-align: left;
+  }
+}
