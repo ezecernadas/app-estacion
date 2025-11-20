@@ -83,6 +83,6 @@
     </div>
 
     @extends(footer)
-    <script src="views/assets/js/navigation.js"></script>
+    <script src="views/assets/js/detail.js"></script>
 </body>
 </html>
