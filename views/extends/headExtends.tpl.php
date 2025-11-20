@@ -41,6 +41,8 @@
       }
 
     </style>
+
     <link rel="stylesheet" href="views/assets/css/footer.css">
+    
     {{ PAGE_STYLES }}
 </head>
